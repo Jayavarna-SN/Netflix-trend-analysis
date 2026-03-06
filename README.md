@@ -85,6 +85,19 @@ Example:
   * Country
 * Validated the dataset before analysis.
 
+# Data Limitations
+
+While analyzing the dataset, several limitations were identified:
+
+* **Missing Values:** Some columns such as director, cast, and country contained missing values. These were replaced with "Unknown" during the data cleaning process.
+* **Multiple Countries in One Field:** Some titles belong to multiple countries but are stored in a single column, which may affect accurate country-level analysis.
+* **Genre Grouping:** The `listed_in` column contains multiple genres in a single field, making precise genre analysis more challenging.
+* **Release Year vs Date Added:** The dataset contains both release year and date added to Netflix, which may lead to different interpretations of content growth.
+* **Dataset Scope:** The dataset may not include the most recent Netflix content, so insights represent trends only up to the dataset's latest update.
+
+These limitations should be considered when interpreting the analysis results.
+
+
 ---
 
 # 4. Analyze

@@ -6,7 +6,6 @@ Dataset: Netflix Movies and TV Shows
 ====================================================
 */
 
-
 -- ==================================================
 -- 1. DATA QUALITY CHECK
 -- Checking missing values in important columns
@@ -19,8 +18,6 @@ COUNT(*) - COUNT(country) AS missing_country,
 COUNT(*) - COUNT(date_added) AS missing_date,
 COUNT(*) - COUNT(duration) AS missing_duration
 FROM Netflix.dbo.Netflix;
-
-
 
 -- ==================================================
 -- 2. DATA CLEANING
@@ -39,8 +36,6 @@ UPDATE Netflix
 SET country = 'Unknown'
 WHERE country IS NULL;
 
-
-
 -- ==================================================
 -- 3. CONTENT TYPE DISTRIBUTION
 -- Identify whether Movies or TV Shows dominate
@@ -51,7 +46,6 @@ SELECT
 COUNT(*) AS total_titles
 FROM Netflix
 GROUP BY [type];
-
 
 
 -- ==================================================
@@ -65,8 +59,6 @@ FROM Netflix
 GROUP BY country
 ORDER BY total_titles DESC;
 
-
-
 -- ==================================================
 -- 5. MOST COMMON CONTENT RATINGS
 -- ==================================================
@@ -78,8 +70,6 @@ FROM Netflix
 GROUP BY rating
 ORDER BY total_titles DESC;
 
-
-
 -- ==================================================
 -- 6. CONTENT RELEASED BY YEAR
 -- ==================================================
@@ -90,8 +80,6 @@ COUNT(*) AS total_titles
 FROM Netflix
 GROUP BY release_year
 ORDER BY release_year DESC;
-
-
 
 -- ==================================================
 -- 7. MOST POPULAR GENRES

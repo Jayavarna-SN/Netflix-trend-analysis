@@ -127,7 +127,7 @@ https://public.tableau.com/views/NetflixAnalysis_17727175772870/Netflixcontenttr
 
 Dashboard Preview:
 
-![Netflix Dashboard](tableau_dashboard/netflix_dashboard.png)
+Netflix_dashboard/Netflix content trends.png
 
 ---
 
